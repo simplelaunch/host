@@ -1,6 +1,7 @@
 <?php
 
 namespace Mizner\SLC;
+
 spl_autoload_register( function ( $class ) {
 
 	$prefix   = __NAMESPACE__; // change this to your root namespace

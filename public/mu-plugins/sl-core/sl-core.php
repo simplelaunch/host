@@ -17,6 +17,10 @@ define( __NAMESPACE__ . '\PROJECT', 'simple-launch' );
 define( __NAMESPACE__ . '\PATH', plugin_dir_path( __FILE__ ) );
 define( __NAMESPACE__ . '\URI', plugin_dir_url( __FILE__ ) );
 
+require_once 'lib/autoloader.php';
+
 add_action( 'plugins_loaded', function () {
+
+	new Removals();
 
 } );
