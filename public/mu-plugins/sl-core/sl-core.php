@@ -21,6 +21,6 @@ require_once 'lib/autoloader.php';
 
 add_action( 'plugins_loaded', function () {
 
-	new Removals();
+	new Roles();
 
 } );
