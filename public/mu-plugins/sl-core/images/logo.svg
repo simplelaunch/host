@@ -1,16 +1,19 @@
 <svg version="1.1"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 x="0px" y="0px" width="25px" height="25px" viewBox="0 0 640 640" style="enable-background:new 0 0 640 640;"
+	 x="0px" y="0px" width="23px" height="23px" viewBox="0 0 640 640" style="enable-background:new 0 0 640 640;"
 	 xml:space="preserve">
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#7AC943;}
 	.st1{fill:#FFFFFF;}
 	.st2{fill:none;stroke:#FFFFFF;stroke-width:17;stroke-miterlimit:10;}
 	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#FFFFFF;stroke-width:17;stroke-miterlimit:10;}
+    #wpadminbar li#wp-admin-bar-logo div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
-<defs>
-</defs>
-<g id="Logo_1_">
+<g id="simpleLaunchLogo">
 	<circle class="st0" cx="320" cy="320" r="320"/>
 	<g>
 		<path class="st1" d="M122.7,376.1c6.6-15.6,16.7-28.6,29.9-37.8c11-7.7,23.4-12.5,37-14.4c-8.2,13.6-16.3,29.3-20.2,37.1
