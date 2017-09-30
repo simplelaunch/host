@@ -2,7 +2,7 @@
 
 namespace Mizner\SLC;
 
-class AdminBarLogo {
+class AdminBar {
 	public function __construct() {
 		add_action( 'admin_bar_menu', [ $this, 'add_logo' ], 1 );
 	}

@@ -29,6 +29,6 @@ add_action( 'plugins_loaded', function () {
 
 
 	new Roles();
-	new AdminBarLogo();
+	new AdminBar();
 
 } );
