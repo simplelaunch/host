@@ -1,6 +1,6 @@
 <?php
 define( 'DB_HOST', 'localhost' );
-define( 'DB_NAME', 'site1' );
+define( 'DB_NAME', 'site2' );
 define( 'DB_USER', 'root' );
 define( 'DB_PASSWORD', 'root' );
 define( 'DB_CHARSET', 'utf8mb4' );
