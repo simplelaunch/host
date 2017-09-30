@@ -7,8 +7,8 @@ define( 'SL_ROOT_URI', 'http://' . SL_SITE );
 // load site-specific configurations.
 require_once dirname( SL_ROOT_PATH ) . '/' . SL_SITE . '/wp-tenant-config.php';
 
-define( 'WP_CONTENT_DIR', SL_ROOT_PATH . '/content' );
 define( 'WP_CONTENT_URL', SL_ROOT_URI . '/content' );
+define( 'WP_CONTENT_DIR', SL_ROOT_PATH . '/content' );
 
 defined( 'WP_SITEURL' ) || define( 'WP_SITEURL', SL_ROOT_URI . '/core' );
 defined( 'WP_HOME' ) || define( 'WP_HOME', SL_ROOT_URI );
