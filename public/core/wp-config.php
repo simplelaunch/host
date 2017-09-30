@@ -22,6 +22,8 @@ define( 'WP_PLUGIN_DIR', SL_ROOT_PATH . '/plugins' );
 define( 'WPMU_PLUGIN_URL', SL_ROOT_URI . '/mu-plugins' );
 define( 'WPMU_PLUGIN_DIR', SL_ROOT_PATH . '/mu-plugins' );
 
+define( 'WP_DEFAULT_THEME', 'genesis' );
+
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __FILE__ ) . '/core' );
