@@ -21,6 +21,13 @@ require_once 'lib/autoloader.php';
 
 add_action( 'plugins_loaded', function () {
 
+	$user = wp_get_current_user();
+
+	if ( user_can( $user, 'administrator' ) ) {
+		return;
+	}
+
+
 	new Roles();
 
 } );
