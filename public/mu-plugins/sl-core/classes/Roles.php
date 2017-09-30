@@ -17,6 +17,8 @@ class Roles {
 
 	public function additions() {
 
+		// @todo: Revise caps
+
 		add_role( 'owner', 'Owner', [
 			'edit_dashboard'                 => true,
 			'export'                         => true,
