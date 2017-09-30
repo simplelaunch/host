@@ -1,7 +1,6 @@
 <?php
-
-/*
- * Plugin Name: Add Theme Directory
+/**
+ * Plugin Name: Multitenancy Theme Support
  */
 
 register_theme_directory( '../themes' );
