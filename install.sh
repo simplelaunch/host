@@ -52,6 +52,7 @@ sudo apt-get install -y software-properties-common
 # sudo apt-get -y install git
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get install ansible
+# http://www.dieuwe.com/blog/xdebug-ubuntu-1604-php7 (x-debug instructions)
 sudo apt-get install php-xdebug
 
 
