@@ -17,6 +17,7 @@ define( 'NONCE_SALT', '=XFky[*a#>s$5-|-knh%i=f/G|TEE-zT8v:J#Fu?IB1gQG.;_G[zK4STv
 
 $table_prefix = 'wp_';
 
+
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_LOG', true );
 define( 'WP_DEBUG_DISPLAY', true );

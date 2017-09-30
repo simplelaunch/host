@@ -10,7 +10,7 @@
  */
 
 function _log( $message ) {
-	if ( true === WP_DEBUG ) {
+	if ( true === WP_DEBUG && true === WP_DEBUG_LOG ) {
 		error_log( '----------------------------------' );
 		foreach ( func_get_args() as $arg ) {
 			if ( is_array( $arg ) || is_object( $arg ) ) {
