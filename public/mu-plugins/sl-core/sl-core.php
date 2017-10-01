@@ -19,8 +19,8 @@ define( __NAMESPACE__ . '\URI', plugin_dir_url( __FILE__ ) );
 
 require_once 'lib/autoloader.php';
 
-add_action( 'plugins_loaded', function () {
 
+add_action( 'plugins_loaded', function () {
 	new DashboardWidgets();
 
 	$user = wp_get_current_user();
@@ -31,12 +31,18 @@ add_action( 'plugins_loaded', function () {
 
 	new Roles();
 	new AdminBar();
-
+//
 	new ProfileEdit();
 	new CustomizerChanges();
 	new AdminFooter();
 	new PluginsPage();
 	new AdminMenu();
-
+	new PostTypeSupport();
+	new ScreenMetaLinks();
+	new UpdateNags();
 } );
+
+
+
+
 

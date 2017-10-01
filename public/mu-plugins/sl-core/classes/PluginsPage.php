@@ -30,6 +30,7 @@ class PluginsPage {
 		$excluded = [
 			'Genesis Columns Advanced',
 			'Genesis Custom Headers',
+			'The Events Calendar',
 		];
 
 		$curated = array_filter( $plugins, function ( $plugin ) use ( $excluded ) {
