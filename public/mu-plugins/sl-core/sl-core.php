@@ -35,6 +35,8 @@ add_action( 'plugins_loaded', function () {
 	new ProfileEdit();
 	new CustomizerChanges();
 	new AdminFooter();
+	new PluginsPage();
+	new AdminMenu();
 
 } );
 
