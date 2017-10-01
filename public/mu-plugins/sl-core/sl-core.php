@@ -27,9 +27,9 @@ add_action( 'plugins_loaded', function () {
 		return;
 	}
 
-
 	new Roles();
 	new AdminBar();
 	new DashboardWidgets();
+	new ProfileEdit();
 
 } );
