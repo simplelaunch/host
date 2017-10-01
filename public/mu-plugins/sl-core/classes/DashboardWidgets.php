@@ -8,7 +8,7 @@ class DashboardWidgets {
 		add_action( 'wp_dashboard_setup', [ $this, 'add_dashboard_widgets' ] );
 		add_action( 'admin_init', [ $this, 'removals' ] );
 
-		// remove_action( 'welcome_panel', 'wp_welcome_panel' ); // todo: what is this?
+		remove_action( 'welcome_panel', 'wp_welcome_panel' );
 		// remove_filter( 'update_footer', 'core_update_footer' ); // todo: what is this?
 	}
 
