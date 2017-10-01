@@ -31,5 +31,7 @@ add_action( 'plugins_loaded', function () {
 	new AdminBar();
 	new DashboardWidgets();
 	new ProfileEdit();
+	new CustomizerChanges();
 
 } );
+
