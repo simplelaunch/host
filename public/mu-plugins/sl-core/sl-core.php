@@ -21,6 +21,8 @@ require_once 'lib/autoloader.php';
 
 add_action( 'plugins_loaded', function () {
 
+	new DashboardWidgets();
+
 	$user = wp_get_current_user();
 
 	if ( user_can( $user, 'administrator' ) ) {
@@ -29,9 +31,10 @@ add_action( 'plugins_loaded', function () {
 
 	new Roles();
 	new AdminBar();
-	new DashboardWidgets();
+
 	new ProfileEdit();
 	new CustomizerChanges();
+	new AdminFooter();
 
 } );
 
