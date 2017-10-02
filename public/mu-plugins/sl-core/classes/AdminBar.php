@@ -18,7 +18,7 @@ class AdminBar {
 
 	public function add_logo( $admin_bar ) {
 		ob_start();
-		include( PATH . 'images/logo.svg' );
+		include( PATH . 'images/simple-launch-logo.svg' );
 		$the_logo = ob_get_clean();
 
 		$admin_bar->add_menu( [
