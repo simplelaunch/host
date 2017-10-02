@@ -28,6 +28,12 @@ define( 'WPMU_PLUGIN_DIR', SL_ROOT_PATH . '/mu-plugins' );
 
 define( 'WP_DEFAULT_THEME', 'genesis' );
 
+// Akismet, Jetpack
+define( 'WPCOM_API_KEY', 'd0dbdc8cbbf4' );
+// Gravity Forms link: https://docs.gravityforms.com/wp-config-options/
+define( 'GF_LICENSE_KEY', 'd5c2aba35ce2f6f9c6f92607f9415f4a' );
+
+
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __FILE__ ) . '/core' );
