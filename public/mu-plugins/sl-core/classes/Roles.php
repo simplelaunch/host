@@ -169,11 +169,27 @@ class Roles {
 		'gravityforms_view_settings'     => true,
 		'gravityforms_view_updates'      => true,
 
+		// Events Calendar
+		'delete_others_tribe_events'     => true,
+		'delete_private_tribe_events'    => true,
+		'delete_published_tribe_events'  => true,
+		'delete_tribe_events'            => true,
+		'edit_others_tribe_events'       => true,
+		'edit_private_tribe_events'      => true,
+		'edit_published_tribe_events'    => true,
+		'edit_tribe_events'              => true,
+		'publish_tribe_events'           => true,
+		'read_private_tribe_events'      => true,
+
 		// Deprecated
 		'level_0'                        => true,
 	];
 
+
 	public function __construct() {
+
+
+		// $this->update_role_caps();
 
 		if ( get_role( 'owner' ) ) {
 			return;
@@ -181,6 +197,20 @@ class Roles {
 
 		$this->additions();
 		$this->removals();
+
+	}
+
+
+	function update_role_caps() {
+
+		/**
+		 * @warning: Only use this to fix something
+		 */
+		$role = get_role( 'owner' );
+
+		foreach ( self::$owner_capabilities as $key => $value ) {
+			$role->add_cap( $key );
+		}
 
 	}
 
