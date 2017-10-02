@@ -1,5 +1,8 @@
 <?php
 
+define( 'SL_BUSINESS_TITLE', 'Simple Launch' );
+define( 'SL_BUSINESS_LINK', '//simplelaun.ch' );
+
 define( 'SL_SITE', $_SERVER['HTTP_HOST'] );
 
 define( 'SL_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] );
