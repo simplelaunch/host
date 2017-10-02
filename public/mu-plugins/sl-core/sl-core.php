@@ -15,23 +15,27 @@ defined( 'WPINC' ) || die;
 
 define( __NAMESPACE__ . '\PROJECT', 'simple-launch' );
 define( __NAMESPACE__ . '\PATH', plugin_dir_path( __FILE__ ) );
-define( __NAMESPACE__ . '\URI', plugin_dir_url( __FILE__ ) );
+
+// Not working in mu-plugin - link: https://core.trac.wordpress.org/ticket/34358
+define( __NAMESPACE__ . '\URI', str_replace( 'plugins/var/www/public/', '', plugin_dir_url( __FILE__ ) ) );
 
 require_once 'lib/autoloader.php';
 
 
 add_action( 'plugins_loaded', function () {
+
 	new DashboardWidgets();
 
-	$user = wp_get_current_user();
+	$current_user = wp_get_current_user();
 
-	if ( user_can( $user, 'administrator' ) ) {
+	if ( user_can( $current_user, 'administrator' ) ) {
 		return;
 	}
 
+	new HideAdministrators( $current_user );
+
 	new Roles();
 	new AdminBar();
-//
 	new ProfileEdit();
 	new CustomizerChanges();
 	new AdminFooter();
@@ -40,6 +44,16 @@ add_action( 'plugins_loaded', function () {
 	new PostTypeSupport();
 	new ScreenMetaLinks();
 	new UpdateNags();
+	new UserColumns();
+	new Security();
+	new LoginPage();
+
+
+	if ( ! in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+		return;
+	}
+	new WooCommerce\ManageNotices();
+
 } );
 
 
