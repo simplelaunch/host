@@ -13,6 +13,13 @@ class HideAdministrators {
 		add_action( 'pre_user_query', [ $this, 'users_page' ] );
 
 		add_filter( 'editable_roles', [ $this, 'add_new_user' ] );
+		add_filter( 'views_users', [ $this, 'subsubsub_remove_administrator' ] );
+	}
+
+	public function subsubsub_remove_administrator( $views ) {
+		unset( $views['administrator'] );
+
+		return $views;
 	}
 
 	public function add_new_user( $editable_roles ) {
