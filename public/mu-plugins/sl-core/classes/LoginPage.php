@@ -2,19 +2,29 @@
 
 namespace Mizner\SLC;
 
+use const SL_BUSINESS_LINK;
+use const SL_BUSINESS_TITLE;
+
 class LoginPage {
 
 	public function __construct() {
-		add_action( 'login_header', [ $this, 'login_header' ] );
+
 		add_action( 'login_enqueue_scripts', [ $this, 'enqueue_style' ], 10 );
+		add_filter( 'login_headerurl', [ $this, 'login_logo_link' ] );
+		add_filter( 'login_headertitle', [ $this, 'login_title' ] );
+
 	}
 
-	function enqueue_style() {
-		wp_enqueue_style( 'login-page-style', URI . 'images/login-page.css' );
+	public function login_title() {
+		return SL_BUSINESS_TITLE;
 	}
 
-	public function login_header() {
-		echo "<h1>asdfas</h1>";
+	public function login_logo_link() {
+		return ( SL_BUSINESS_LINK ); // putting my URL in place of the WordPress one
+	}
+
+	public function enqueue_style() {
+		wp_enqueue_style( 'login-page-style', URI . '/css/login-page.css' );
 	}
 
 }

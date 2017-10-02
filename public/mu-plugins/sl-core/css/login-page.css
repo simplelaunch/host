@@ -1,3 +1,6 @@
 .login h1 a {
-  background-image: none, url(core/mu-plugins/images/simple-launch-logo.svg);
+  width: 200px;
+  height: 200px;
+  background-size: 200px;
+  background-image: none, url(../images/simple-launch-logo.svg);
 }
