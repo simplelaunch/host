@@ -15,6 +15,9 @@ class PluginsPage {
 		'tablepress',
 		'wp-instagram-widget',
 		'twitter',
+		'leadin', // Hubspot
+		'simple-social-icons',
+		'wp-gallery-custom-links',
 	];
 
 	public $plugins_to_auto_activate = [
@@ -28,7 +31,11 @@ class PluginsPage {
 		'genesis-dambuster',
 		'genesis-simple-edits',
 		'genesis-simple-share',
+		'genesis-simple-sidebars',
+		'genesis-responsive-slider',
+		'genesis-columns-advanced',
 		'gravityforms',
+		'hookpress-master',
 		'imsanity',
 		'note',
 		'seriously-simple-podcasting-genesis-support',
@@ -36,7 +43,7 @@ class PluginsPage {
 		'widget-clone',
 		'wp-better-emails',
 		'sucuri-scanner',
-		'hookpress-master',
+
 	];
 
 	public $links_allowed = [
