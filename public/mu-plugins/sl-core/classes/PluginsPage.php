@@ -4,10 +4,18 @@ namespace Mizner\SLC;
 
 class PluginsPage {
 
+	static $plugins_shown = [
+		'Genesis Columns Advanced',
+		'Genesis Custom Headers',
+		'The Events Calendar',
+		'WooCommerce',
+		'Disable Comments',
+	];
+
 	public function __construct() {
 		add_filter( 'show_advanced_plugins', '__return_false' );
-		add_filter( 'plugin_row_meta', [ $this, 'hide_plugin_metadata' ], 10, 2 );
 		add_filter( 'all_plugins', [ $this, 'control_plugins_shown' ] );
+		add_filter( 'plugin_row_meta', [ $this, 'hide_plugin_metadata' ], 99, 2 );
 		add_filter( 'plugin_action_links', [ $this, 'hide_plugin_links' ] );
 	}
 
@@ -25,18 +33,10 @@ class PluginsPage {
 		return $curated;
 	}
 
-
 	public function control_plugins_shown( $plugins ) {
-		$excluded = [
-			'Disable All WordPress Updates',
-			'Genesis Columns Advanced',
-			'Genesis Custom Headers',
-			'The Events Calendar',
-			'WooCommerce',
-		];
 
-		$curated = array_filter( $plugins, function ( $plugin ) use ( $excluded ) {
-			return in_array( $plugin['Name'], $excluded );
+		$curated = array_filter( $plugins, function ( $plugin ) {
+			return in_array( $plugin['Name'], self::$plugins_shown );
 		} );
 
 		return $curated;
