@@ -1,6 +1,7 @@
 <?php
 
-define( 'SL_SITE', $_SERVER['SERVER_NAME'] );
+define( 'SL_SITE', $_SERVER['HTTP_HOST'] );
+
 define( 'SL_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] );
 define( 'SL_ROOT_URI', 'http://' . SL_SITE );
 
