@@ -3,8 +3,8 @@ Contributors: ndiego, outermostdesign
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TY8RB6CHZSFAG
 Tags: header, genesis, custom header, featured image, Genesis Framework, genesiswp
 Requires at least: 3.6
-Tested up to: 4.5
-Stable tag: 1.1.4
+Tested up to: 4.9
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,6 +81,9 @@ By default, when you deactivate and uninstall this plugin, none of the settings 
 5. An output example using a custom image and caption on the Genesis default theme by StudioPress
 
 == Changelog ==
+
+= 1.1.5 =
+* Fixed bug caused by Jetpack and other theme switching plugins
 
 = 1.1.4 =
 * Fixed uninstall bug for non-Genesis users

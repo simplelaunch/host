@@ -8,6 +8,11 @@ add_action( 'wp', 'gch_enable_header_frontend' );
  * If so, add custom header using print_header()
  */
 function gch_enable_header_frontend() {
+
+	// Bail early if Genesis isn't installed
+	if ( ! function_exists( 'genesis_get_option' ) ) {
+		return;
+	}
 	
 	// Get our global plugin settings
 	$gch_header_position		= genesis_get_option( 'header_position', 'genesis-custom-header' );
@@ -70,6 +75,11 @@ add_action( 'wp_head', 'gch_custom_css' );
  */
 function gch_custom_css() {
 
+	// Bail early if Genesis isn't installed
+	if ( ! function_exists( 'genesis_get_option' ) ) {
+		return;
+	}
+
 	// Get our global plugin settings
 	$gch_enable_header_css  = genesis_get_option( 'enable_header_css', 'genesis-custom-header' );
 	$gch_header_css 		= genesis_get_option( 'header_css', 'genesis-custom-header' );
@@ -88,6 +98,11 @@ function gch_custom_css() {
  * Add featured image, slider, or content to each page
  */
 function gch_print_header() {
+
+	// Bail early if Genesis isn't installed
+	if ( ! function_exists( 'genesis_get_option' ) ) {
+		return;
+	}
 	
 	// Get our global plugin settings
 	$gch_disable_header_wrap 		    = genesis_get_option( 'disable_header_wrap', 'genesis-custom-header' );	

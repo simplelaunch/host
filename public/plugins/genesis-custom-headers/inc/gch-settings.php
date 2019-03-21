@@ -8,6 +8,11 @@ add_action( 'genesis_admin_menu', 'gch_register_admin_settings'  );
  */
 function gch_register_admin_settings() {
 
+	// Bail early if Genesis isn't installed
+	if ( ! function_exists( 'genesis_get_option' ) ) {
+		return;
+	}
+
 	class GCH_Admin_Settings extends Genesis_Admin_Boxes {
 	
 		/**
@@ -54,7 +59,7 @@ function gch_register_admin_settings() {
 				'disable_header_wrap'	    => 0,
 				'enable_header_css'		    => 0,
 				'header_css'			    => '',
-				'disable_marketing_notices'	=> 1,
+				'disable_marketing_notices'	=> 0,
 				'uninstall_on_delete'	    => 0
 			);
 	

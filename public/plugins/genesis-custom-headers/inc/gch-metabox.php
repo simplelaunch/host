@@ -8,6 +8,11 @@ add_action( 'add_meta_boxes', 'gch_create' );
  */
 function gch_create( $postType ) {
 
+	// Bail early if Genesis isn't installed
+	if ( ! function_exists( 'genesis_get_option' ) ) {
+		return;
+	}
+
 	// Get certain plugin settings
 	$metabox_title = genesis_get_option( 'metabox_title', 'genesis-custom-header' ) ;
 	
@@ -44,6 +49,11 @@ function gch_create( $postType ) {
  * Prints custom header metabox
  */
 function gch_metabox_function( $post ) {
+
+	// Bail early if Genesis isn't installed
+	if ( ! function_exists( 'genesis_get_option' ) ) {
+		return;
+	}
 
 	// Get the post type of the current page
 	$type = get_post_type( get_the_ID() );
@@ -369,6 +379,11 @@ add_action( 'save_post', 'gch_save_meta' );
  * Save all data for staff_member custom post type
  */
 function gch_save_meta( $post_id ) {
+
+	// Bail early if Genesis isn't installed
+	if ( ! function_exists( 'genesis_get_option' ) ) {
+		return;
+	}
 
 	// Get our global plugin settings
 	$gch_global_enable_header_image 	= genesis_get_option( 'enable_header_image', 'genesis-custom-header' ) ;
