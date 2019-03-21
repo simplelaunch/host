@@ -5,7 +5,8 @@ define( 'SL_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] );
 define( 'SL_ROOT_URI', 'http://' . SL_SITE );
 
 define( 'SL_THEME_URI', SL_ROOT_URI . '/themes' );
-define( 'SL_THEME_PATH', SL_ROOT_PATH . '/themes' );
+
+define( 'SL_THEME_PATH', SL_ROOT_PATH . '/themes/' );
 
 // load site-specific configurations.
 require_once dirname( SL_ROOT_PATH ) . '/' . SL_SITE . '/wp-tenant-config.php';
